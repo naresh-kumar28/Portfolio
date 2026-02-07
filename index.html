@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen w-full bg-white overflow-x-hidden">
+
+  <!-- Background -->
+  <div
+    class="relative h-full w-full bg-cover bg-center"
+    style="background-image: url('assets/home_bg.jpg');"
+  >
+    <!-- Overlay for readability -->
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <!-- Header -->
+    <header class="relative z-10 flex justify-between items-center px-6 md:px-12 lg:px-16 py-4 md:py-6">
+      <a
+        href="/"
+        class="text-lg md:text-2xl font-bold text-white bg-[#bd69f5] px-3 md:px-4 py-2 rounded-xl shadow-lg hover:scale-105 transition"
+      >
+        Portfolio
+      </a>
+
+      <nav class="flex items-center gap-3 md:gap-6 text-white font-semibold text-sm md:text-base">
+        <a class="hover:text-[#bd69f5] transition" href="project.html">Project</a>
+        <a class="hover:text-[#bd69f5] transition" href="about.html">About</a>
+        <a class="hover:text-[#bd69f5] transition" href="team.html">Team</a>
+        <a class="hover:text-[#bd69f5] transition" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="relative z-10 flex items-center justify-center px-4 md:px-8 lg:px-16 py-8 -mt-4 md:py-0 h-[calc(100vh-80px)]">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-14 max-w-6xl w-full bg-white/80 backdrop-blur-xl rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-2xl"
+      >
+        <!-- Left -->
+        <div class="flex flex-col justify-center">
+          <h1 class="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4 md:mb-6">
+            Welcome to Our <span class="text-[#bd69f5]">Portfolio</span>
+          </h1>
+
+          <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">
+            We craft stunning designs and unforgettable digital experiences.
+            Every pixel, every interaction — done with purpose.
+          </p>
+
+          <p class="text-sm md:text-base text-gray-600 mb-6 md:mb-8">
+            From web design to branding and digital solutions, we help ideas
+            turn into impactful products.
+          </p>
+
+          <button
+            class="w-fit bg-[#bd69f5] text-white font-bold px-6 md:px-8 lg:px-10 py-2 md:py-3 text-sm md:text-base rounded-xl shadow-lg
+                   hover:bg-[#a855d8] hover:shadow-xl hover:scale-105 transition-all"
+          >
+            Get Started →
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center justify-center">
+          <img
+            src="https://avatars.githubusercontent.com/u/202608703?v=4"
+            alt="Portfolio showcase"
+            class="w-full h-48 sm:h-64 md:h-72 lg:h-96 object-cover rounded-xl md:rounded-2xl shadow-xl ring-4 ring-white"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
