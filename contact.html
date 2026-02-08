@@ -8,99 +8,84 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#0b0b0f] text-white min-h-screen">
+<body class="text-white min-h-screen">
 
   <!-- Header / Navbar -->
-  <header class="sticky top-0 z-50 bg-[#0b0b0f]/80 backdrop-blur-xl border-b border-white/10">
-    <div class="flex justify-between items-center px-16 py-5 max-w-7xl mx-auto">
-      <a href="/" class="text-2xl font-extrabold text-[#bd69f5]">Portfolio</a>
-      <nav class="flex gap-6 text-gray-300 font-medium">
-        <a href="project.html" class="hover:text-white">Projects</a>
-        <a href="about.html" class="hover:text-white">About</a>
-        <a href="team.html" class="hover:text-white">Team</a>
-        <a href="contact.html" class="text-white">Contact</a>
-      </nav>
-    </div>
+  <header class="flex bg-white justify-between items-center px-6 md:px-12 lg:px-16 py-4 md:py-6 shadow-sm sticky top-0">
+    <a href="/"
+      class="text-lg md:text-2xl font-bold text-white bg-[#bd69f5] px-3 md:px-4 py-2 rounded-xl shadow-lg hover:scale-105 transition">
+      Portfolio
+    </a>
+  
+    <nav class="flex items-center gap-3 md:gap-6 text-black font-bold text-sm md:text-base">
+      <a class="hover:text-[#bd69f5] transition" href="project.html">Project</a>
+      <a class="hover:text-[#bd69f5] transition" href="about.html">About</a>
+      <a class="hover:text-[#bd69f5] transition" href="team.html">Team</a>
+      <a class="hover:text-[#bd69f5] transition" href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <!-- Contact Section -->
-  <section class="px-16 py-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+  <section class="px-10 md:px-16 py-14 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
 
     <!-- Left Info -->
     <div>
-      <h1 class="text-5xl font-extrabold mb-6">
+      <h1 class="text-5xl font-extrabold mb-6 text-black">
         Let’s <span class="text-[#bd69f5]">Talk</span>
       </h1>
 
-      <p class="text-gray-400 mb-8 leading-relaxed">
+      <p class="text-gray-700 mb-8 leading-relaxed">
         Got a project, idea, or just want to say hi?  
         Drop a message — I usually reply faster than your Wi-Fi reconnects.
       </p>
 
       <!-- Contact Info -->
-      <div class="space-y-6 text-gray-300">
-        <div class="flex items-center gap-4">
-          <span class="text-[#bd69f5] text-xl">📧</span>
-          <span>yourmail@example.com</span>
-        </div>
-        <div class="flex items-center gap-4">
-          <span class="text-[#bd69f5] text-xl">📍</span>
-          <span>Remote / Worldwide</span>
-        </div>
-        <div class="flex items-center gap-4">
-          <span class="text-[#bd69f5] text-xl">💼</span>
-          <span>Available for freelance</span>
-        </div>
+      <div class="w-full h-85 overflow-hidden rounded-3xl shadow-2xl ring-4 ring-[#bd69f5]/40">
+        <img src="assets/contact.avif" alt="Profile"
+          class=" object-fit" />
       </div>
 
       <!-- Socials -->
-      <div class="flex gap-6 mt-10 text-gray-400">
+      <!-- <div class="flex gap-6 mt-10 text-gray-400">
         <a href="#" class="hover:text-white transition">GitHub</a>
         <a href="#" class="hover:text-white transition">LinkedIn</a>
         <a href="#" class="hover:text-white transition">Twitter</a>
-      </div>
+      </div> -->
     </div>
 
     <!-- Right Form -->
-    <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-10 shadow-2xl">
+    <div class="bg-[#bd69f5] rounded-3xl p-10 shadow-2xl">
 
       <form class="space-y-6">
         <div>
-          <label class="block text-sm mb-2 text-gray-300">Your Name</label>
+          <label class="block text-md font-bold mb-2 text-white">Your Name</label>
           <input
-            type="text"
-            placeholder="John Doe"
-            class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3
-                   focus:outline-none focus:border-[#bd69f5]"
-          />
+            type="text" placeholder="eg. Rahul Kumar" class="w-full bg-white rounded-xl px-4 py-3 focus:outline-none text-black"/>
         </div>
 
         <div>
-          <label class="block text-sm mb-2 text-gray-300">Email Address</label>
+          <label class="block text-md font-bold mb-2 text-white">Email Address</label>
           <input
             type="email"
-            placeholder="john@example.com"
-            class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3
-                   focus:outline-none focus:border-[#bd69f5]"
-          />
+            placeholder="eg. rahul@gmail.com" class="w-full bg-white rounded-xl px-4 py-3 focus:outline-none text-black"/>
         </div>
 
         <div>
-          <label class="block text-sm mb-2 text-gray-300">Message</label>
+          <label class="block text-md font-bold mb-2 text-white">Mobile No</label>
+          <input type="number" placeholder="eg. +91 000000000"
+            class="w-full bg-white rounded-xl px-4 py-3 focus:outline-none text-black" />
+        </div>
+
+        <div>
+          <label class="block text-md font-bold mb-2 text-white">Message</label>
           <textarea
             rows="5"
-            placeholder="Tell me about your project..."
-            class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3
-                   focus:outline-none focus:border-[#bd69f5] resize-none"
-          ></textarea>
+            placeholder="Tell me about your project..." class="w-full bg-white rounded-xl px-4 py-3 focus:outline-none text-black resize-none"></textarea>
         </div>
 
         <button
-          type="submit"
-          class="w-full bg-[#bd69f5] py-3 rounded-xl font-semibold
-                 hover:bg-[#a855d8] hover:shadow-xl transition"
-        >
-          Send Message 🚀
+          type="submit" class="w-full bg-black py-3 rounded-xl font-semibold hover:bg-[#a855d8] hover:shadow-xl transition">
+          Send Message
         </button>
       </form>
 
@@ -108,8 +93,8 @@
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-10 text-gray-500 text-sm border-t border-white/10">
-    © 2026 • Let’s build something cool ✨
+  <footer class="bg-black py-7 text-white text-center text-sm ">
+    © 2026 • Designed & Built with 💜
   </footer>
 
 </body>
