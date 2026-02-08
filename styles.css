@@ -1,0 +1,46 @@
+
+:root{
+  --primary: #bd69f5;
+  --primary-40: rgba(189,105,245,0.4);
+  --white: #ffffff;
+  --black: #000000;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --pink-500: #ec4899;
+}
+
+/* Typography */
+.text-white{color:var(--white)}
+.text-black{color:var(--black)}
+
+
+/* Backgrounds & colors using attribute selectors to match Tailwind-style tokens */
+.bg-white{background-color:var(--white)}
+.bg-black{background-color:var(--black)}
+[class*="bg-[#bd69f5]"]{background-color:var(--primary)}
+[class*="bg-gray-600"]{background-color:var(--gray-600)}
+
+/* Text color utilities */
+.text-gray-400{color:var(--gray-400)}
+
+/* Ring approximation */
+.ring-4{box-shadow:0 0 0 4px rgba(255,255,255,0.95) inset, 0 0 0 4px rgba(0,0,0,0) }
+/* If a class contains ring-[#bd69f5], make ring use primary color at 40% */
+[class*="ring-[#bd69f5]"]{box-shadow:0 0 0 4px var(--primary-40)}
+
+
+/* Gradient helpers using substring matching */
+.bg-gradient-to-r{background:linear-gradient(90deg,var(--from, var(--primary)),var(--to, var(--pink-500)));color:var(--white)}
+[class*="from-[#bd69f5]"]{--from:var(--primary)}
+[class*="to-pink-500"]{--to:var(--pink-500)}
+
+/* Small utility colors */
+.text-gray-700{color:var(--gray-700)}
+.bg-white\/80{background-color:rgba(255,255,255,0.8)}
+.backdrop-blur-xl{backdrop-filter:blur(10px)}
+
+/* Specific attribute-targeted tweaks for classes with special characters (safe fallback)
+   These match the exact token contained in class attributes and apply expected colors/gradients. */
+[class*="bg-[#bd69f5]"]{color:var(--white)}
+[class*="ring-[#bd69f5]/40"]{box-shadow:0 0 0 4px rgba(189,105,245,0.4)}
